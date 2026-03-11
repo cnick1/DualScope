@@ -22,7 +22,17 @@ sudo chmod +x ~/Scripts/dualscope_trigger.sh
 sudo chmod +x ~/Scripts/dualscope_vertical_payload.sh
 sudo chmod +x ~/Scripts/dualscope_payload.sh
 
+# Add rules to allow the dualscope scripts to be run without password
+echo "$(whoami) ALL=(ALL) NOPASSWD: /usr/local/bin/dualscope/dualscope.sh" | sudo tee /etc/sudoers.d/dualscope
+echo "$(whoami) ALL=(ALL) NOPASSWD: /usr/local/bin/dualscope/dualscope.sh" | sudo tee /etc/sudoers.d/dualscope_vertical
+
+
 # Copy over the autostart shortcuts. These run the payload scripts on login.
-# - it looks like these require the use of absolute paths, which requires the individual's username. So instead, just manually make the autostart entries yourself. They just need to point to the payload scripts.
+# - it looks like these require the use of absolute paths, which requires the individual's username. So instead, just manually make the autostart entries yourself. They just need to point to the payload scripts; you can do it using the Settings -> Autostart -> Add New -> Application
 # sudo cp DualScopeVertical.desktop ~/.config/autostart/DualScopeVertical.desktop
 # sudo cp DualScope.desktop ~/.config/autostart/DualScope.desktop
+
+# Create the second local account
+sudo useradd PlayerTwo
+sudo passwd PlayerTwo
+
