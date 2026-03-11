@@ -7,6 +7,8 @@ This is a simple script, originally by NaviVani, to enable local multiplayer in 
 
 In this repository, I am sharing some additional scripts I made so that DualScope works a bit more seamlessly on Bazzite-Deck. There are two versions of DualScope provided, for if you want to split your display vertically or horizontally. Furthermore, there are some simple wrapper scripts so that DualScope can be started/stopped directly from Gaming Mode in Bazzite, without having to manually go to desktop mode and use a keyboard/mouse. 
 
+Warning: The scripts here require sudo permissions, and some of the functionality to move windows around, etc. requires additional security settings to be adjusted. The author(s) shall not be held liable for any damages, including but not limited to data loss, system failure, or financial loss, arising from the use or inability to use this software. Basically, run my random bash scripts you download from the internet at your own risk.
+
 # Installation
 If anyone comes across this and needs help, we can work on sprucing up the documentation. In the meantime, here are the installation instructions I came up with retracing my steps.
 
